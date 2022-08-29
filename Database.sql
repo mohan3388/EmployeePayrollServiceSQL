@@ -22,3 +22,7 @@ Insert Into employee_payroll(Name, Salary, StartDate) values('Govind',6095, '202
 
 ----UC4-----
 select * from employee_payroll
+
+-----UC5------
+Select Salary from employee_payroll where Name = 'mohan'
+Select Salary from employee_payroll where StartDate Between CAST('2021-09-03' as date) and GETDATE()
