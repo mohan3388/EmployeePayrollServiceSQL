@@ -31,8 +31,13 @@ Select Salary from employee_payroll where StartDate Between CAST('2021-09-03' as
 ----UC6----
 Alter table employee_payroll 
 Add Gender varchar(1)
+Update employee_payroll set Gender ='M' where Name = 'rohan' or Name = 'mohan sahu'
+Update employee_payroll set Gender ='M' where Name = 'Govind'
+Update employee_payroll set Name = 'Priya', Gender='F' where Id=3
 
-
-
-
-Update employee_payroll set Gender ='M' where Name = 'mohan' or Name = 'mohan sahu'
+----UC7----
+select SUM(Salary) from employee_payroll where Gender='F' group by Gender
+select AVG(Salary) from employee_payroll where Gender='F' group by Gender
+select COUNT(Salary) from employee_payroll where Gender='F' group by Gender
+select MAX(Salary) from employee_payroll where Gender='M' group by Gender
+select MIN(Salary) from employee_payroll where Gender='M' group by Gender
