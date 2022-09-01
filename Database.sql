@@ -43,4 +43,7 @@ select MAX(Salary) from employee_payroll where Gender='M' group by Gender
 select MIN(Salary) from employee_payroll where Gender='M' group by Gender
 
 ----UC8----
-Alter table employee_payroll add PhoneNumber bigint, Address varchar(200) not null default 'Mumbai', Department varchar(100) not null default 'Marketing'
+Alter table employee_payroll Add  bigint, Address varchar(50), Department varchar(30);
+
+---UC9----
+Alter table employee_payroll  Add Pay decimal(10), Deduction decimal(10), TaxablePay decimal(10), IncomeTax decimal(10), NetPay decimal(10);
