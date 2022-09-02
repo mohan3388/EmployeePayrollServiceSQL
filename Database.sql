@@ -47,3 +47,7 @@ Alter table employee_payroll Add  bigint, Address varchar(50), Department varcha
 
 ---UC9----
 Alter table employee_payroll  Add Pay decimal(10), Deduction decimal(10), TaxablePay decimal(10), IncomeTax decimal(10), NetPay decimal(10);
+
+---UC10---
+Update employee_payroll set Department = 'Sales' where Name = 'Terrisa'
+Insert into employee_payroll (Name, Department) values ('Terrisa', 'Marketing')
